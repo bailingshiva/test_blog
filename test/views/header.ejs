@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+<a href="/">首页</a>
+<% if (user) { %>
+<span>您已登陆：</span><a href="/user/<%= user._id %>"><%= user.name %></a>  <a href="/add">发表微博</a>
+<a href="/list">微博列表</a>  <a href="/exit">退出</a>
+<% } else { %>
+<a href="/login">登陆</a>
+<a href="/reg">注册</a>
+<% console.log(locals.user);} %>
+<p>这里是<%= title %></p>
